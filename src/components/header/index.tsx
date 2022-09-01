@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './styles.module.scss'
+import styles from './Header.module.css'
 
 function Header() {
   return (
-    <div className={styles['header']}>
-      <h2>Game Room</h2>
-    </div>
+    <section className={styles['navbar']}>
+      <h3>Game Room</h3>
+    </section>
   );
 }
 
