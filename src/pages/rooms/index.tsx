@@ -1,16 +1,20 @@
-import React from 'react';
-import Header from '../../components/header';
-import styles from './styles.module.scss'
+import React from "react";
+import Navbar from "../../components/navbar";
+import RoomsList from "../../components/rooms-list";
+import styles from "./styles.module.scss";
 
-function Rooms() {
-    return (
-        <>
-            <Header />
-            <section className={styles['rooms']}>
-                <h3>oi</h3>
-            </section>
-        </>
-    );
-}
+const Rooms: React.FC = () => {
+  return (
+    <>
+      <Navbar />
+      <section className={styles["rooms"]}>
+        <div className={styles["rooms__wrapper"]}>
+          <RoomsList title="Available rooms" />
+        </div>
+        <div className={styles["rooms__wrapper"]}>opa</div>
+      </section>
+    </>
+  );
+};
 
 export default Rooms;

@@ -1,6 +1,8 @@
 .rooms {
-    h3 {
-        color: blue;
-        font-size: 20px;
-    } 
+  display: flex;
+
+  &__wrapper {
+    padding: 25px;
+    flex: 1;
+  }
 }
