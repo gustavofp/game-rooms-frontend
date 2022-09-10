@@ -1,0 +1,44 @@
+.roomsList {
+  &__info {
+    display: flex;
+  }
+
+  &__wrapper {
+    flex: 1;
+
+    &--right {
+      text-align: right;
+
+      button {
+        padding: 15px;
+      }
+    }
+  }
+
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+
+    th,
+    td {
+      padding: 10px 0px;
+    }
+
+    &__headerRow {
+      text-align: left;
+      font-size: 20px;
+      border-bottom: 4px solid white;
+    }
+
+    &__row {
+      cursor: pointer;
+      border-bottom: 1px solid white;
+    }
+  }
+
+  .item {
+    &__cell--empty {
+      text-align: center;
+    }
+  }
+}

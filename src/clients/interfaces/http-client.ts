@@ -4,5 +4,6 @@ export interface HttpResponse {
 }
 
 export interface HttpClient {
-    get: (url: string) => Promise<HttpResponse>
+    get: (url: string) => Promise<HttpResponse>,
+    post: (url: string, body: object) => Promise<HttpResponse>
 }

@@ -1,14 +1,19 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Rooms from './pages/rooms'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import { makeRoomsPage } from "./factories/pages/rooms";
+import { RecoilRoot } from "recoil";
+import { makePlayerPage } from "./factories/pages/player";
 
 const Router: React.FC = () => {
-    return (
-        <BrowserRouter>
-          <Routes>
-            <Route path="/rooms" element={<Rooms />} />
-          </Routes>
-        </BrowserRouter>
-    )
-  }
-  
-  export default Router
+  return (
+    <RecoilRoot>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={makePlayerPage({})} />
+          {/* <Route path="/rooms" element={makeRoomsPage({})} /> */}
+        </Routes>
+      </BrowserRouter>
+    </RecoilRoot>
+  );
+};
+
+export default Router;
