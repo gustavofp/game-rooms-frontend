@@ -1,4 +1,4 @@
-import { SocketClient, SocketConnection } from "infra/interfaces/socket-client";
+import { SocketClient, SocketConnection } from "infra/socket-client";
 import { Channel, Socket } from 'phoenix';
 
 

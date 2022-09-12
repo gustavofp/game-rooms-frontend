@@ -1,5 +1,5 @@
-import { Room } from "models/room"
-import { RoomsList } from "models/rooms-list"
+import { Room } from "domain/models/room"
+import { RoomsList } from "domain/models/rooms-list"
 
 export interface UpdateRoomsFeedUseCase {
     execute: (callback: (rooms: RoomsList) =>  RoomsList) => void

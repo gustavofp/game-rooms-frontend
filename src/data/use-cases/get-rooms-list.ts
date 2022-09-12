@@ -1,7 +1,7 @@
-import { HttpClient } from "clients/interfaces/http-client";
+import { HttpClient } from "infra/http-client";
 import { API_URL } from "config/constants";
-import { RoomsList } from "models/rooms-list";
-import { GetRoomsListUseCase } from "interfaces/get-rooms-list";
+import { RoomsList } from "domain/models/rooms-list";
+import { GetRoomsListUseCase } from "domain/use-cases/get-rooms-list";
 
 export default class GetRoomsListUseCaseImp implements GetRoomsListUseCase {
     constructor(

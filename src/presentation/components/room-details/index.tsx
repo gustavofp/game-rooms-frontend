@@ -2,7 +2,7 @@ import React, { InputHTMLAttributes } from "react";
 import { useRecoilValue } from "recoil";
 import { selectedRoomState } from "main/atoms";
 import { Player } from "domain/models/player";
-import SectionTitle from "section-title";
+import SectionTitle from "presentation/components/section-title";
 // import styles from "./styles.module.scss";
 
 const renderPlayerList = (players: Player[]) =>

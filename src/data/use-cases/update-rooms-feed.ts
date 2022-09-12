@@ -1,6 +1,6 @@
-import { SocketClient } from "clients/interfaces/socket-client";
-import { RoomsList } from "models/rooms-list";
-import { UpdateRoomsFeedUseCase } from "interfaces/update-rooms-feed";
+import { SocketClient } from "infra/socket-client";
+import { RoomsList } from "domain/models/rooms-list";
+import { UpdateRoomsFeedUseCase } from "domain/use-cases/update-rooms-feed";
 
 export default class UpdateRoomsFeedUseCaseImpl implements UpdateRoomsFeedUseCase {
   constructor(private readonly socketClient: SocketClient) {}

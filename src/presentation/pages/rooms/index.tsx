@@ -1,17 +1,17 @@
 import React, { useEffect, Context, createContext } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
-import Navbar from "components/navbar";
-import RoomsList from "components/rooms-list";
-import { Room } from "models/room";
-import { GetRoomsListUseCase } from "use-cases/interfaces/get-rooms-list";
-import { UpdateRoomsFeedUseCase } from "use-cases/interfaces/update-rooms-feed";
+import Navbar from "presentation/components/navbar";
+import RoomsList from "presentation/components/rooms-list";
+import { Room } from "domain/models/room";
+import { GetRoomsListUseCase } from "domain/use-cases/get-rooms-list";
+import { UpdateRoomsFeedUseCase } from "domain/use-cases/update-rooms-feed";
 import styles from "./styles.module.scss";
-import { createRoomVisibleState, roomsListState } from "atoms";
-import RoomDetails from "components/room-details";
-import CreateRoom from "components/create-room";
-import { CreateRoomUseCase } from "use-cases/interfaces/create-room";
+import { createRoomVisibleState, roomsListState } from "main/atoms";
+import RoomDetails from "presentation/components/room-details";
+import CreateRoom from "presentation/components/create-room";
+import { CreateRoomUseCase } from "domain/use-cases/create-room";
 // import { RoomsContext } from "./context";
-import MainTemplate from "templates/main";
+import MainTemplate from "presentation/templates/main";
 
 type Props = {
   getRoomsList: GetRoomsListUseCase;
