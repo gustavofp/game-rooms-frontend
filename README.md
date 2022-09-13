@@ -9,6 +9,6 @@ Clean Architecture design
 
 # Demo
 
-![](https://github.com/gustavofp/game-rooms-frontend/demo1.gif)
+![](https://github.com/gustavofp/game-rooms-frontend/blob/main/demo1.gif)
 
-![](https://github.com/gustavofp/game-rooms-frontend/demo2.gif)
+![](https://github.com/gustavofp/game-rooms-frontend/blob/main/demo2.gif)
