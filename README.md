@@ -19,4 +19,5 @@ Clean Architecture design
 - [ ] Prevent player to join another rooms while already joined one (backend + frontend)
 - [ ] When joined a room, room details UI doesnt update
 - [ ] UI validation to prevent player join same room twice
+- [ ] UI change when room is full
 - [ ] better UI
