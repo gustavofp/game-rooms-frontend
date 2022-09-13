@@ -1,5 +1,5 @@
-import { Room } from "./room"
+import { RoomModel } from "./room"
 
-export type RoomsList = {
-    rooms: Room[]
+export type RoomsListModel = {
+    rooms: RoomModel[]
 }

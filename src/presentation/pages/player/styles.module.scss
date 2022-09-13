@@ -1,0 +1,10 @@
+.player {
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+  margin: 0;
+  &__wrapper {
+    /* Center horizontally*/
+    padding: 25px;
+  }
+}

@@ -7,12 +7,15 @@ import {
   createRoomVisibleState,
 } from "main/atoms";
 import styles from "./styles.module.scss";
-import { Room } from "domain/models/room";
+import { RoomModel } from "domain/models/room";
 import Button from "../button";
+import { ROOMS_STATUS } from "config/constants";
 
 const RoomsList: React.FC = () => {
   const roomsList = useRecoilValue(roomsListState);
-  const setSelectedRoom = useSetRecoilState<Room | null>(selectedRoomState);
+  const setSelectedRoom = useSetRecoilState<RoomModel | null>(
+    selectedRoomState
+  );
   const setCreateRoomVisible = useSetRecoilState<Boolean>(
     createRoomVisibleState
   );
@@ -28,12 +31,12 @@ const RoomsList: React.FC = () => {
     </tr>
   );
 
-  const selectRoom = (room: Room) => {
+  const selectRoom = (room: RoomModel) => {
     setCreateRoomVisible(false);
     setSelectedRoom(room);
   };
 
-  const renderDataRow = (room: Room) => (
+  const renderDataRow = (room: RoomModel) => (
     <tr
       className={styles["table__row"]}
       key={room.id}
@@ -47,7 +50,7 @@ const RoomsList: React.FC = () => {
     </tr>
   );
 
-  const renderData = (list: Room[]) => list.map(renderDataRow);
+  const renderData = (list: RoomModel[]) => list.map(renderDataRow);
 
   const renderEmptyDataMessage = (message: string) => (
     <tr className={styles["table__row"]}>

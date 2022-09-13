@@ -1,5 +1,5 @@
-import { Room } from "domain/models/room"
+import { RoomModel } from "domain/models/room"
 
 export interface CreateRoomUseCase {
-    execute: (room: Room) => Promise<void>
+    execute: (room: RoomModel) => Promise<void>
 }

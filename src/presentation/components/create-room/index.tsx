@@ -1,26 +1,33 @@
 import React, { MouseEventHandler, useContext, useState } from "react";
 import { useRecoilValue } from "recoil";
-import { createRoomVisibleState } from "main/atoms";
+import { createRoomVisibleState, setPlayer } from "main/atoms";
 import { ROOMS_STATUS } from "config/constants";
-import { Room } from "domain/models/room";
+import { RoomModel } from "domain/models/room";
 import Button from "../button";
 import SectionTitle from "../section-title";
 import styles from "./styles.module.scss";
+import { CreateRoomUseCase } from "domain/use-cases/create-room";
 
-const CreateRoom: React.FC = () => {
+type Props = {
+  createRoomUseCase: CreateRoomUseCase;
+};
+
+const CreateRoom: React.FC<Props> = ({ createRoomUseCase }: Props) => {
   const createRoomVisible = useRecoilValue<Boolean>(createRoomVisibleState);
   const [name, setName] = useState("");
   const [maxPlayers, setMaxPlayers] = useState(5);
+  const playerState = useRecoilValue(setPlayer);
 
   const submitForm: MouseEventHandler<Element> = (event) => {
     // console.log(event);
-    event.preventDefault();
-    const room: Room = {
+    const room: RoomModel = {
       name,
       max_players: maxPlayers,
-      players: [],
+      players: [playerState],
     };
-    // createRoomUseCase && createRoomUseCase.execute(room);
+    createRoomUseCase.execute(room);
+
+    event.preventDefault();
   };
 
   return (

@@ -17,4 +17,8 @@ export default class HttpClientAxios implements HttpClient {
     async post(url: string, body: Object): Promise<HttpResponse> {
         return await this.axios.post(url, JSON.stringify(body))
     }
+
+    async put(url: string, body: Object): Promise<HttpResponse> {
+        return await this.axios.put(url, JSON.stringify(body))
+    }
 }

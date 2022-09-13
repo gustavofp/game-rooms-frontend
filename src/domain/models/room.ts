@@ -1,9 +1,9 @@
-import { Player } from "./player"
+import { PlayerModel } from "./player"
 
-export type Room = {
+export type RoomModel = {
     id?: string
     name: string
     status?: string
     max_players: number,
-    players: Player[]
+    players: PlayerModel[]
 }
